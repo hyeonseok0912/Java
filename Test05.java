@@ -1,20 +1,36 @@
-package dec06;
+package dec11;
 
 public class Test05 {
 
 	public static void main(String[] args) {
-		String text = "1q2w3e4r5t";
-		String answer = "";
-		// 여기에서 문자를 모두 제거하고 숫자만 출력해주세요.
+		int i = 3;
+		int k = 1;
+		switch (i) {
+		case 1:
+			k += 1;
+		
+			
+		case 2:
+			k ++;
+		
+			
+		case 3:
+			k = 0;
+		
+			
+		case 4:
+			k += 3;
+		
+			
+		case 5:
+			k -= 10;
 
-		for (int i = 0; i < text.length(); i++) {
-			if (Character.isAlphabetic(text.charAt(i))) {
-				continue;
-			} else {
-				answer += text.charAt(i);
-			}
+		default:
+			k--;
+			
+			break;
 		}
-		System.out.println(answer);
+		System.out.println(k);
 	}
 
 }

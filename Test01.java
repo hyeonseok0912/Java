@@ -1,16 +1,17 @@
-package dec08;
+package dec11;
 
 public class Test01 {
 
 	public static void main(String[] args) {
-		boolean check[] = new boolean[5];
-		
-		for (int i = 0; i < check.length; i++) {
-			check[i] = i % 2 == 0 ? false : true;
-		}
-		
-		for (boolean i : check) {
-			System.out.println(i);
+		// 진법문제
+		// 10 -> 1010
+		// System.out.println(Integer.toBinaryString(10));
+
+		int number = 4;
+
+		while (number >= 1) {
+			System.out.print(number % 2);
+			number /= 2;
 		}
 	}
 
