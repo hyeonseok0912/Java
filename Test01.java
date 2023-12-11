@@ -1,31 +1,49 @@
-package dec05;
-/*
- * 여러분은 과수원을 하고 있습니다.
- * 키우는 과일은 사과, 배, 오렌지 입니다.
- * 각각 하루 생산량은 5, 7, 5개가 열립니다.
- * 위 값을 기준으로 하루 총 생산되는 과일의 수를 출력해주세요.
- * 출력시키고 하루 기준으로 시간당 몇 개의 과일이 열리는지 출력해주세요.
- * 예)총 생산 갯수 : 17
- *    시간당 생산 갯수 : 0.nnnnn...
- *    
- *  주의 : 최대한 변수를 많이 사용하고, 반드시 한번의 리터럴 값을 적어주세요.
- *  	   캐스팅 많이 활용하세요. 평균 변수는 float 타입으로 선언하셔서
- *         사용하세요.
- */
+package dec06;
 
 public class Test01 {
 
 	public static void main(String[] args) {
-		int apple = 5;
-		int pear = 7;
-		int orange = 5;
-		float avg1;
+		int a = (int) (Math.random() * 127 + 1);
+		// System.out.println((char) a);
 
-		int total = apple + pear + orange;
-		avg1 = (float) total / 24;
+		// 영문자인지, 숫자인지, 특수기호인지 찾아내는 if문을 만들고 싶어요
 
-		System.out.println("하루 총 생산되는 과일의 수: " + total);
-		System.out.println("시간당 생산 갯수: " + avg1);
+		if (a >= 48 && a <= 57) {
+			System.out.println("숫자입니다");
+		} else if (a >= 58 && a <= 64 || a >= 91 && a <= 96 || a >= 123 && a <= 126) {
+			System.out.println("특수기호 입니다");
+		} else if (a >= 65 && a <= 90 || a >= 97 && a <= 122) {
+			System.out.println("영문자입니다");
+		} else {
+			System.out.println("이상한 문자입니다");
+		}
+
+		// 숫자인지, 특수기호인지 찾아내는 if문을 만들고 싶어요
+		if (a >= '0' && a <= '9') {
+			System.out.println("숫자입니다");
+		} else if (a >= 'A' && a <= 'Z') {
+			System.out.println("영어 대문자입니다");
+		} else if (a >= 'a' && a <= 'z') {
+			System.out.println("영어 소문자입니다");
+		} else {
+			System.out.println("숫자/영어 외 특수문자입니다.");
+		}
+
+		// 메소드로 구분하기
+		// api보기
+		// Character 클래스가 있습니다.
+		// 이 클래스는 자바에서 사용되는 모든 문자 정보가 있습니다.
+		// 특정 메소드를 사용하면 더 쉽게 만들 수 있습니다.
+
+		if (Character.isDigit(a)) {
+			System.out.println("숫자입니다");
+		} else if (Character.isUpperCase(a)) {
+			System.out.println("대문자입니다");
+		} else if (Character.isLowerCase(a)) {
+			System.out.println("소문자입니다");
+		} else {
+			System.out.println("숫자/영어 외 특수문자입니다");
+		}
+		//API 애플리케이션 프로그램 인터페이스
 	}
-
 }
