@@ -1,29 +1,22 @@
-package dec04;
+package dec05;
 
 public class HelloWorld {// 클래스
-
-	public static void main2() {
-		System.out.println("main2 메소드 입니다.");
-	}
-
-	public static void main(String[] args) {// 메소드
-		System.out.println("Hello World");// 명령문장
-		// main2();
-	}
-
-}// 클래스 끝
-
-class Apple{
-	public static void main(String[] args) {
-		System.out.println("Apple");
+	public static void main(String[] args) {// main메소드
+		//변수 선언 정수 기본 타입으로 number라는 이름의 변수를 만들어
+		//값은 리터럴 값을 저장해주세요.
+		int number = 1;
+		
+		System.out.println("Hello World");
+		System.out.println(number);
 	}
 }
-
-//한줄주석
-/* 문단 주석 */
-/** 문서 주석 */
-
-//클래스 : 객체 최소 단위
-//메소드 : function, 명령 단위, 명령 문장의 집합
-//		   하나의 기능을 수행
-//명령문장 : 세미콜론(;)으로 끝나는 문장.
+/*
+ * 기본타입(크기 순서대로)
+ * 정수 : byte, short, int, long
+ * 실수 : float, double
+ * 문자 : char
+ * 논리 : boolean
+ * 
+ * 프로모션 : 작은 타입이 큰 타입에 자동 대입될 때
+ * 캐스트 : 큰 타입이 작은 타입에 대입할 때, (타입)적어주기, 값 절삭
+ */
